@@ -21,7 +21,7 @@ runs:
     - name: Checkout external action repo
       uses: actions/checkout@v2
       with:
-        repository: 'username/repoB' 
+        repository: 'AdamBoukhari/ci-skip-action' 
 
     - name: Install dependencies
       run: pip install requests
