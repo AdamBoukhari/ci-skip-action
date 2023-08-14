@@ -5,13 +5,6 @@ inputs:
   token:
     description: "It's the github classic token that has the right of your repository"
     required: true
-  last-commit:
-    description: "it's the last commit before the current push. You can have it with github.event.before"
-    required: true
-  new-commit:
-    description: "the sha of the last commit of the current push. You can get it with github.sha "
-    required: true
- 
 runs:
   using: "composite"
   steps: 
