@@ -31,7 +31,7 @@ runs:
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
       run: |
-        MESSAGES=$(python scripts/get_commits.py "${{ inputs.last-commit }}" "${{ inputs.new-commit }}")
+        MESSAGES=$(python scripts/get_commits.py "${{ github.event.before }}" "${{ github.sha }}")
         echo "messages=$MESSAGES" >> $GITHUB_ENV
       shell: bash
 
